@@ -1,0 +1,58 @@
+[
+  {
+    "inputs": [
+      {"internalType": "uint256[2]", "name": "_pA", "type": "uint256[2]"},
+      {"internalType": "uint256[2][2]", "name": "_pB", "type": "uint256[2][2]"},
+      {"internalType": "uint256[2]", "name": "_pC", "type": "uint256[2]"},
+      {"internalType": "uint256[5]", "name": "_pubSignals", "type": "uint256[5]"}
+    ],
+    "name": "verifyAndAnchor",
+    "outputs": [{"internalType": "bool", "name": "accepted", "type": "bool"}],
+    "stateMutability": "external",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {"internalType": "uint256", "name": "commitmentA", "type": "uint256"},
+      {"internalType": "int256", "name": "deltaV_mm_s", "type": "int256"},
+      {"internalType": "uint256", "name": "separation_after_m", "type": "uint256"}
+    ],
+    "name": "recordManeuver",
+    "outputs": [],
+    "stateMutability": "external",
+    "type": "function"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": true, "internalType": "uint256", "name": "proofId", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "commitmentA", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "commitmentB", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "dist_sq_m", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "R_m", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "timestamp", "type": "uint256"}
+    ],
+    "name": "DataAnchored",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": true, "internalType": "uint256", "name": "maneuverId", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "commitmentA", "type": "uint256"},
+      {"indexed": false, "internalType": "int256", "name": "deltaV_mm_s", "type": "int256"},
+      {"indexed": false, "internalType": "uint256", "name": "separation_after_m", "type": "uint256"},
+      {"indexed": false, "internalType": "uint256", "name": "timestamp", "type": "uint256"}
+    ],
+    "name": "ManeuverRecorded",
+    "type": "event"
+  },
+  {
+    "anonymous": false,
+    "inputs": [
+      {"indexed": true, "internalType": "address", "name": "verifier", "type": "address"}
+    ],
+    "name": "VerifierSet",
+    "type": "event"
+  }
+]

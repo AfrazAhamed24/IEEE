@@ -1,0 +1,31 @@
+# Environment variables (NEVER COMMIT THIS)
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.env/
+
+# Build artifacts & caches
+dist/
+build/
+.cache/
+*.log
+
+# Hardhat artifacts (optional, but good to keep repo small)
+artifacts/
+cache_hardhat/
+typechain-types/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# The old dead frontend/apps folder (if you want to clean it up)
+_apps_dead/
+keys/
+build/
